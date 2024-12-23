@@ -99,7 +99,7 @@ function EloStats() {
         },
         {
             "gameName": "ElKaisero",
-            "tagLine": null,
+            "tagLine": "BTOQ",
             "participantName": "lcloud_darkl",
             "isStreamer": false,
             "twitchLink": null
@@ -169,14 +169,14 @@ function EloStats() {
         },
         {
             "gameName": "Caitlyn Klein",
-            "tagLine": null,
+            "tagLine": "BTOQ",
             "participantName": "sebarunner21",
             "isStreamer": false,
             "twitchLink": null
         },
         {
             "gameName": "We Love Taylor",
-            "tagLine": null,
+            "tagLine": "BTOQ",
             "participantName": "eliiiiiiiiian",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/eliiiiiiiiian"
@@ -438,29 +438,33 @@ function EloStats() {
     });
 
     const tierOrder = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"];
-    const rankOrder = { "IV": 4, "III": 3, "II": 2, "I": 1 };
-
+    const rankOrder = { "I": 1, "II": 2, "III": 3, "IV": 4 };
+    
     const sortedStats = combinedStats.sort((a, b) => {
         const soloA = a.data?.find((entry) => entry.queueType === "RANKED_SOLO_5x5") || {};
         const soloB = b.data?.find((entry) => entry.queueType === "RANKED_SOLO_5x5") || {};
-
+    
         const tierA = soloA.tier || "UNRANKED";
         const tierB = soloB.tier || "UNRANKED";
         const rankA = soloA.rank || "IV";
         const rankB = soloB.rank || "IV";
         const lpA = soloA.leaguePoints || 0;
         const lpB = soloB.leaguePoints || 0;
-
+    
+        // Comparar tiers
         if (tierOrder.indexOf(tierA) !== tierOrder.indexOf(tierB)) {
             return tierOrder.indexOf(tierB) - tierOrder.indexOf(tierA);
         }
-
+    
+        // Comparar rangos dentro del mismo tier
         if (rankOrder[rankA] !== rankOrder[rankB]) {
-            return rankOrder[rankB] - rankOrder[rankA];
+            return rankOrder[rankA] - rankOrder[rankB]; // Aquí se corrige el orden para que "I" sea más alto que "IV"
         }
-
+    
+        // Comparar LP dentro del mismo rango
         return lpB - lpA;
     });
+    
 
     return (
         <div className="participantes-container">
