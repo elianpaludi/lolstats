@@ -1,30 +1,327 @@
+@font-face {
+  font-family: 'Monument';
+  src: url('./fonts/MonumentExtended-Regular.otf') format('opentype');
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Monument';
+}
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 20px;
 }
 
+
+h1, h2{
+  text-align: center;
+}
+
+/* ------------------------- subnav */
+
+.sub_navbar{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+}
+.sub_navbar ul p{
+  color: white;
+  font-size: 12px;
+  margin-right: 30px;
+}
+.sub_navbar ul{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sub_navbar ul li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sub_navbar img{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+/* ------------------------- nav */
+.navbar{
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  display: flex;
+  background-color: #5e5e5e79;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 40px; /* Define el espacio entre los elementos */
+  text-decoration: none;
+  margin-left:120px;
+}
+
+
+.navbar ul li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+.img-nav {
+  height: 100px; /* Ajusta a un tamaño razonable */
+  width: auto;
+  object-fit: contain; /* Asegura que el logo mantenga proporciones */
+}
+
+
+/* ------------------------- home */
+.home_container {
+  background-size: cover;
+  background-position: center;
+  
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.home_content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 200px);
+
+}
+
+.background{
+  width: 100%;
+  height: calc(100vh + 50px);
+  position: absolute;
+  z-index: -5;
+  top: -50px;
+  object-fit: cover;
+}
+
+.bqc{
+  width: 25%;
+}
+.home_beto-container{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.beto-stream{
+  width: 80%;
+  height: 400px;
+}
+
+
+/* ------------------- TABLA */
 table {
   margin: 20px auto;
   border-collapse: collapse;
   width: 80%;
+  color: white; 
+  background-color: #272727; 
+}
+.table-row{
+  transition: all 0.3s ease-in-out;
+  background-color: #1a1a1a; 
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+.table-row:hover {
+  animation: neonRainbow 3s infinite alternate; 
+  transform: scale(1.0050); 
+  cursor: pointer;
+}
+
+@keyframes neonRainbow {
+  0% {
+      box-shadow: 0 0 20px #ff0000a9, 0 0 50px #ff0000a9, 0 0 30px #ff0000a9;
+  }
+  20% {
+      box-shadow: 0 0 20px #ff9900a8, 0 0 50px #ff9900a8, 0 0 30px #ff9900a8;
+  }
+  40% {
+      box-shadow: 0 0 20px #ffff00ad, 0 0 50px #ffff00ad, 0 0 30px #ffff00ad;
+  }
+  60% {
+      box-shadow: 0 0 20px #00ff00b9, 0 0 50px #00ff00b9, 0 0 30px #00ff00b9;
+  }
+  80% {
+      box-shadow: 0 0 20px #0000ffb6, 0 0 50px #0000ffb6, 0 0 30px #0000ffb6;
+  }
+  100% {
+      box-shadow: 0 0 20px #ff00ffa8, 0 0 50px #ff00ffa8, 0 0 30px #ff00ffa8;
+  }
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #444; /* Bordes grises oscuros */
+  padding: 10px; /* Aumentar el padding para mejor diseño */
   text-align: center;
 }
 
 th {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #1f1f1f; /* Fondo más oscuro para encabezados */
+  color: #fff; /* Color de texto blanco */
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #333333; /* Alternar fondo en filas pares */
+}
+
+tr:nth-child(odd) {
+  background-color: #272727; /* Alternar fondo en filas impares */
 }
 
 tr:hover {
-  background-color: #ddd;
+  background-color: #444444; /* Cambia el fondo al pasar el cursor */
+}
+
+a {
+  color: #00aaff; /* Color para enlaces (como el ícono de Twitch) */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* ------------------------- participantes */
+
+.participantes-container{
+  background-color: rgb(10, 10, 10);
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.participantes-banner{
+  width: 80%;
+  height: 100px;
+  margin: 130px auto 80px auto;
+  background-color: #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participantes-banner h3{
+  color: black;
+  font-size: 35px;
+}
+
+.participantes-img{
+  width: 90px;
+  margin: 0 50px;
+  height: auto;
+}
+
+/* ------------------------------------------- LIVE STREAMS */
+
+
+.live-streams{
+  background-color: rgb(14, 14, 14);
+  height: 100vh;
+  width: 100%;
+
+}
+.live-streams div{
+  display: flex;
+  align-items: center;
+}
+
+.live-streams a{
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.live-streams div img{
+  width: 25px;
+  height: 25px;
+}
+
+/* ------------------------------------------------------           Responsive */
+@media (max-width: 768px) {
+  .home_content{
+    flex-direction: row;
+  }
+
+  .beto-stream{
+    margin-right:5px;
+    margin-top:auto;
+  }
+
+  .bqc{
+    margin-top: 80px;
+  }
+
+  .navbar ul{
+    margin-left: 0;
+    
+  }
+
+  .navbar ul li a{
+    margin: 0 10px;
+    font-size: 12px;
+  }
+
+  .home-top{
+    display:flex;
+    flex-direction: column;
+  }
+  
+}
+
+.participantes-banner-home{
+  display:none;
+}
+@media (max-width: 768px) {
+  .participantes-banner-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(170, 170, 170, 0.39);
+    backdrop-filter: blur(5px);
+    top: 50px;
+    position: relative;
+    height: 60px;
+  }
+
+  .participantes-banner-home h3{
+    font-size: 15px;
+  }
+  .participantes-banner-home img{
+    width: 50px;
+  }
 }
