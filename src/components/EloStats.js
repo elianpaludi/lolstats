@@ -511,7 +511,7 @@ function EloStats() {
                                         {user.isStreamer ? (
                                             <a href={user.twitchLink} target="_blank" rel="noopener noreferrer">
                                                 <img
-                                                    src="./img/12.png"
+                                                    src="img/12.png"
                                                     alt="Twitch"
                                                     width="32"
                                                     height="32"
