@@ -9,7 +9,7 @@ function EloStats() {
         {
             gameName: "Elian Payne",
             tagLine: "BTOQ",
-            participantName: "reshito",
+            participantName: "Reshito",
             isStreamer: true,
             twitchLink: "https:\/\/www.twitch.tv\/reshito"
         },
@@ -19,13 +19,6 @@ function EloStats() {
             participantName: "BTOmmyn",
             isStreamer: true,
             twitchLink: "https:\/\/www.twitch.tv\/BTOmmyn"
-        },
-        {
-            gameName: "Tomas Michele",
-            tagLine: "BTOQ",
-            participantName: "veoHukopp",
-            isStreamer: false,
-            twitchLink: null
         },
         {
             "gameName": "ElVenao",
@@ -58,16 +51,9 @@ function EloStats() {
         {
             "gameName": "Katamerquero",
             "tagLine": "BTOQ",
-            "participantName": "www.twitch.tv\/nazaacc",
+            "participantName": "Nazaacc",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/www.twitch.tv\/nazaacc"
-        },
-        {
-            "gameName": "Messi chikito",
-            "tagLine": "BTOQ",
-            "participantName": "ifranquito_",
-            "isStreamer": false,
-            "twitchLink": null
         },
         {
             "gameName": "333",
@@ -107,7 +93,7 @@ function EloStats() {
         {
             "gameName": "minun",
             "tagLine": "btoq",
-            "participantName": "twitch.tv\/cherriw_",
+            "participantName": "Cherriw_",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/cherriw_"
         },
@@ -147,13 +133,6 @@ function EloStats() {
             "twitchLink": null
         },
         {
-            "gameName": "ANDROMEDA",
-            "tagLine": "BTOQ",
-            "participantName": "twitch.tv\/zh4ifer",
-            "isStreamer": true,
-            "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/zh4ifer"
-        },
-        {
             "gameName": "plusle",
             "tagLine": "BTOQ",
             "participantName": "sshirow_",
@@ -168,16 +147,9 @@ function EloStats() {
             "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/luquetti777"
         },
         {
-            "gameName": "Caitlyn Klein",
-            "tagLine": "BTOQ",
-            "participantName": "sebarunner21",
-            "isStreamer": false,
-            "twitchLink": null
-        },
-        {
             "gameName": "We Love Taylor",
             "tagLine": "BTOQ",
-            "participantName": "eliiiiiiiiian",
+            "participantName": "Eliian__",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/eliiiiiiiiian"
         },
@@ -189,20 +161,6 @@ function EloStats() {
             "twitchLink": null
         },
         {
-            "gameName": "LaDelDa\u00f1o",
-            "tagLine": "BTOQ",
-            "participantName": "twitch.tv\/alisseer",
-            "isStreamer": true,
-            "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/alisseer"
-        },
-        {
-            "gameName": "\u2066Dumaxis\u2069",
-            "tagLine": "\u2066Btoq\u2069",
-            "participantName": "dumax_medina",
-            "isStreamer": true,
-            "twitchLink": "https:\/\/www.twitch.tv\/dumax_medina"
-        },
-        {
             "gameName": "ADHD RIVEN",
             "tagLine": "BTOQ",
             "participantName": "ssjunkn0wn",
@@ -212,7 +170,7 @@ function EloStats() {
         {
             "gameName": "Cute Destruction",
             "tagLine": "BTOQ",
-            "participantName": "bolitadehelado",
+            "participantName": "Redsneyer",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/bolitadehelado"
         },
@@ -224,13 +182,6 @@ function EloStats() {
             "twitchLink": null
         },
         {
-            "gameName": "Agosff",
-            "tagLine": "efe",
-            "participantName": "BTHTukophite",
-            "isStreamer": true,
-            "twitchLink": "https:\/\/www.twitch.tv\/BTHTukophite"
-        },
-        {
             "gameName": "Arves",
             "tagLine": "BTOQ",
             "participantName": "Arvespra",
@@ -240,7 +191,14 @@ function EloStats() {
         {
             "gameName": "Goticas al MD",
             "tagLine": "BTOQ",
-            "participantName": "daddysmar",
+            "participantName": "DaddySmar",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
+        },
+        {
+            "gameName": "BTO Hikibi",
+            "tagLine": "BTO",
+            "participantName": "DaddySmar",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
         },
@@ -261,14 +219,14 @@ function EloStats() {
         {
             "gameName": "Nagi Seishiro",
             "tagLine": "BTOQ",
-            "participantName": "twitch.tv\/jardazlol",
+            "participantName": "Jardazlol",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/jardazlol"
         },
         {
             "gameName": "mondongo",
             "tagLine": "BTOQ",
-            "participantName": "twitch.tv\/horizon_von",
+            "participantName": "horizon_von",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/horizon_von"
         },
@@ -289,7 +247,7 @@ function EloStats() {
         {
             "gameName": "\u2066BetominSlayer\u2069",
             "tagLine": "\u2066BTOQ\u2069",
-            "participantName": "BTO_CARPincho",
+            "participantName": "veohukopp",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/BTO_CARPincho"
         },
@@ -310,7 +268,7 @@ function EloStats() {
         {
             "gameName": "LaReichi",
             "tagLine": "BTOQ",
-            "participantName": "www.twitch.tv\/lareich_",
+            "participantName": "lareich_",
             "isStreamer": false,
             "twitchLink": null
         },
@@ -324,14 +282,14 @@ function EloStats() {
         {
             "gameName": "\u2066BTOEli\u2069",
             "tagLine": "\u2066btoq\u2069",
-            "participantName": "https:\/\/twitch.tv\/sirtiki",
+            "participantName": "SirTiki",
             "isStreamer": false,
             "twitchLink": null
         },
         {
             "gameName": "BTOTiki",
             "tagLine": "BTOQ",
-            "participantName": "siraeli",
+            "participantName": "SirEeli",
             "isStreamer": false,
             "twitchLink": null
         },
@@ -345,7 +303,7 @@ function EloStats() {
         {
             "gameName": "Volg",
             "tagLine": "BTOQ",
-            "participantName": "veoulisesw_",
+            "participantName": "Veoulisesw_",
             "isStreamer": false,
             "twitchLink": null
         },
@@ -394,7 +352,7 @@ function EloStats() {
         {
             "gameName": "The beast",
             "tagLine": "btoq",
-            "participantName": "twitch.tv\/veokarmapp",
+            "participantName": "Veokarmapp",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/veokarmapp"
         }
