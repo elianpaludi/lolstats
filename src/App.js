@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/elo" element={<EloStats />} />
         <Route path="/live" element={<LiveStreams/>} />
-        <Route path="/elo/riot.txt" element={<Riot/>} />
       </Routes>
     </Router>
   );
