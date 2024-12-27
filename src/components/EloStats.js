@@ -23,9 +23,9 @@ function EloStats() {
             twitchLink: "https:\/\/www.twitch.tv\/BTOmmyn"
         },
         {
-            gameName: "Zh4ifer",
+            gameName: "Trozo de caca",
             tagLine: "BTOQ",
-            participantName: "Trozo de caca",
+            participantName: "Zh4ifer",
             isStreamer: true,
             twitchLink: "http://twitch.tv/zh4ifer"
         },
@@ -214,8 +214,8 @@ function EloStats() {
         {
             "gameName": "BTO Hikibi",
             "tagLine": "BTO",
-            "participantName": "DaddySmar",
-            "isStreamer": true,
+            "participantName": "HukoPP",
+            "isStreamer": false,
             "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
         },
         {
