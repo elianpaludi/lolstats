@@ -3,7 +3,6 @@ import axios from "axios";
 import Nav from './Nav.js'
 import Subnav from './Subnav.js'
 import Spinner from './Spinner.js'
-import CanvasParticles from 'canvasparticles-js'
 
 function EloStats() {
 
