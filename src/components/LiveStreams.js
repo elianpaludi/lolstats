@@ -1,115 +1,375 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Nav from './Nav.js'
+import Subnav from './Subnav.js'
+
 
 function LiveStreams() {
     const [users] = useState([
+        {
+            "gameName": "Se\u00f1or Bigotes",
+            "tagLine": "BTOQ",
+            "participantName": "Betomin",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Betomin"
+        },
+        {
+            gameName: "Elian Payne",
+            tagLine: "BTOQ",
+            participantName: "Reshito",
+            isStreamer: true,
+            twitchLink: "https:\/\/www.twitch.tv\/reshito"
+        },
         {
             gameName: "Asstral",
             tagLine: "BTOQ",
             participantName: "BTOmmyn",
             isStreamer: true,
-            twitchLink: "https://www.twitch.tv/BTOmmyn",
+            twitchLink: "https:\/\/www.twitch.tv\/BTOmmyn"
         },
         {
-            gameName: "Tomas Michele",
+            gameName: "Trozo de caca",
             tagLine: "BTOQ",
-            participantName: "veoHukopp",
-            isStreamer: false,
-            twitchLink: "",
-        },
-        {
-            gameName: "ElVenao",
-            tagLine: "BTOQ",
-            participantName: "sherdeath",
+            participantName: "Zh4ifer",
             isStreamer: true,
-            twitchLink: "https://www.twitch.tv/sherdeath",
+            twitchLink: "http://twitch.tv/zh4ifer"
         },
         {
-            gameName: "Shebii",
+            gameName: "Frijochiquito",
             tagLine: "BTOQ",
-            participantName: "biiann_",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/biiann_",
-        },
-        {
-            gameName: "tetas de jamon",
-            tagLine: "btoq",
-            participantName: "1lautahz",
+            participantName: "Frijolitoo",
             isStreamer: false,
-            twitchLink: "",
+            twitchLink: "https:\/\/www.twitch.tv\/BTOmmyn"
         },
         {
-            gameName: "Unlocker404",
-            tagLine: "4684",
-            participantName: "denissales",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/denissales",
+            "gameName": "ElVenao",
+            "tagLine": "BTOQ",
+            "participantName": "sherdeath",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/sherdeath"
         },
         {
-            gameName: "Sendo",
-            tagLine: "BTOQ",
-            participantName: "tryhqrdsito",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/tryhqrdsito",
+            "gameName": "Shebii",
+            "tagLine": "BTOQ",
+            "participantName": "biiann_",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/biiann_"
         },
         {
-            gameName: "Katamerquero",
-            tagLine: "BTOQ",
-            participantName: "nazaacc",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/nazaacc",
+            "gameName": "tetas de jamon",
+            "tagLine": "btoq",
+            "participantName": "1lautahz",
+            "isStreamer": false,
+            "twitchLink": null
         },
         {
-            gameName: "Messi chikito",
-            tagLine: "BTOQ",
-            participantName: "ifranquito_",
-            isStreamer: false,
-            twitchLink: "",
+            "gameName": "Sendo",
+            "tagLine": "BTOQ",
+            "participantName": "tryhqrdsito",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/tryhqrdsito"
         },
         {
-            gameName: "333",
-            tagLine: "BTOQ",
-            participantName: "ayelencitapp",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/ayelencitapp",
+            "gameName": "Katamerquero",
+            "tagLine": "BTOQ",
+            "participantName": "Nazaacc",
+            "isStreamer": true,
+            "twitchLink": "https:/www.twitch.tv/nazaacc"
         },
         {
-            gameName: "soul",
-            tagLine: "BTOQ",
-            participantName: "Cryntzz",
-            isStreamer: false,
-            twitchLink: "",
+            "gameName": "333",
+            "tagLine": "BTOQ",
+            "participantName": "ayelencitapp",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/ayelencitapp"
         },
         {
-            gameName: "ilostcustody69",
-            tagLine: "BTOQ",
-            participantName: "permabanpac_",
-            isStreamer: false,
-            twitchLink: "",
+            "gameName": "soul",
+            "tagLine": "BTOQ",
+            "participantName": "Cryntzz",
+            "isStreamer": false,
+            "twitchLink": null
         },
         {
-            gameName: "BarcoBasurero",
-            tagLine: "BTOQ",
-            participantName: "Relty69",
-            isStreamer: false,
-            twitchLink: "",
+            "gameName": "ilostcustody69",
+            "tagLine": "BTOQ",
+            "participantName": "permabanpac_",
+            "isStreamer": false,
+            "twitchLink": null
         },
         {
-            gameName: "ElKÆsero",
-            tagLine: "",
-            participantName: "lcloud_darkl",
-            isStreamer: false,
-            twitchLink: "",
+            "gameName": "BarcoBasurero",
+            "tagLine": "BTOQ",
+            "participantName": "Relty69",
+            "isStreamer": false,
+            "twitchLink": null
         },
         {
-            gameName: "minun",
-            tagLine: "btoq",
-            participantName: "cherriw_",
-            isStreamer: true,
-            twitchLink: "https://www.twitch.tv/cherriw_",
+            "gameName": "ElKaisero",
+            "tagLine": "BTOQ",
+            "participantName": "lcloud_darkl",
+            "isStreamer": false,
+            "twitchLink": null
         },
-
-        
+        {
+            "gameName": "minun",
+            "tagLine": "btoq",
+            "participantName": "Cherriw_",
+            "isStreamer": true,
+            "twitchLink": "https://www.twitch.tv/cherriw_"
+        },
+        {
+            "gameName": "Markuz30",
+            "tagLine": "BTOQ",
+            "participantName": "markuz30",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/markuz30"
+        },
+        {
+            "gameName": "kenn",
+            "tagLine": "BTOQ",
+            "participantName": "kenn01_",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/kenn01_"
+        },
+        {
+            "gameName": "ACM1PTLOKITASAPE",
+            "tagLine": "BTOQ",
+            "participantName": "hanzo_hasashi_goh",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/hanzo_hasashi_goh"
+        },
+        {
+            "gameName": "Biishe",
+            "tagLine": "BTOQ",
+            "participantName": "biiash7_",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/biiash7_"
+        },
+        {
+            "gameName": "Nakroth",
+            "tagLine": "BTOQ",
+            "participantName": "Redsneyder",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "plusle",
+            "tagLine": "BTOQ",
+            "participantName": "sshirow_",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Fan de Sebaskayn",
+            "tagLine": "BTOQ",
+            "participantName": "twitch.tv\/luquetti777",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/luquetti777"
+        },
+        {
+            "gameName": "We Love Taylor",
+            "tagLine": "BTOQ",
+            "participantName": "Eliian__",
+            "isStreamer": true,
+            "twitchLink": "https:/www.twitch.tv/eliian__"
+        },
+        {
+            "gameName": "CARREO CULONAS",
+            "tagLine": "BTOQ",
+            "participantName": "Nikeetto",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "ADHD RIVEN",
+            "tagLine": "BTOQ",
+            "participantName": "ssjunkn0wn",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/ssjunkn0wn"
+        },
+        {
+            "gameName": "Cute Destruction",
+            "tagLine": "BTOQ",
+            "participantName": "Redsneyer",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/bolitadehelado"
+        },
+        {
+            "gameName": "Duck in the box",
+            "tagLine": "BTOQ",
+            "participantName": "reyshaquito",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Arves",
+            "tagLine": "BTOQ",
+            "participantName": "Arvespra",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Arvespra"
+        },
+        {
+            "gameName": "Goticas al MD",
+            "tagLine": "BTOQ",
+            "participantName": "DaddySmar",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
+        },
+        {
+            "gameName": "BTO Hikibi",
+            "tagLine": "BTO",
+            "participantName": "HukoPP",
+            "isStreamer": false,
+            "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
+        },
+        {
+            "gameName": "TE AMO SHECKLER",
+            "tagLine": "BTOQ",
+            "participantName": "exiled_bunny",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/exiled_bunny"
+        },
+        {
+            "gameName": "BTOc\u00fcm",
+            "tagLine": "BTO",
+            "participantName": "NsbTotty",
+            "isStreamer": true,
+            "twitchLink": "https://www.twitch.tv/NsbTotty"
+        },
+        {
+            "gameName": "Nagi Seishiro",
+            "tagLine": "BTOQ",
+            "participantName": "Jardazlol",
+            "isStreamer": true,
+            "twitchLink": "https://www.twitch.tv/twitch.tv/jardazlol"
+        },
+        {
+            "gameName": "mondongo",
+            "tagLine": "BTOQ",
+            "participantName": "horizon_von",
+            "isStreamer": true,
+            "twitchLink": "https://www.twitch.tv/horizon_von"
+        },
+        {
+            "gameName": "El jefeee",
+            "tagLine": "BTOQ",
+            "participantName": "Zedalyn",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Zedalyn"
+        },
+        {
+            "gameName": "KilluaProGamer",
+            "tagLine": "BTOQ",
+            "participantName": "killuagod_13",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/killuagod_13"
+        },
+        {
+            "gameName": "\u2066BetominSlayer\u2069",
+            "tagLine": "\u2066BTOQ\u2069",
+            "participantName": "veohukopp",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/BTO_CARPincho"
+        },
+        {
+            "gameName": "godeta",
+            "tagLine": "BTOQ",
+            "participantName": "lusiern4ga",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/lusiern4ga"
+        },
+        {
+            "gameName": "BamRyu",
+            "tagLine": "BTOQ",
+            "participantName": "lneithanl",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "LaReichi",
+            "tagLine": "BTOQ",
+            "participantName": "lareich_",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Cerbatana wins",
+            "tagLine": "BTOQ",
+            "participantName": "JalkzatFPS",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/JalkzatFPS"
+        },
+        {
+            "gameName": "\u2066BTOEli\u2069",
+            "tagLine": "\u2066btoq\u2069",
+            "participantName": "SirTiki",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "BTOTiki",
+            "tagLine": "BTOQ",
+            "participantName": "SirEeli",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Mean Destruction",
+            "tagLine": "BTOQ",
+            "participantName": "Bolitadehelado",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Bolitadehelado"
+        },
+        {
+            "gameName": "Volg",
+            "tagLine": "BTOQ",
+            "participantName": "Veoulisesw_",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Brandy",
+            "tagLine": "BTOQ",
+            "participantName": "Karenjal_",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Karenjal_"
+        },
+        {
+            "gameName": "M\u00efchiP\u00e4o",
+            "tagLine": "BTOQ",
+            "participantName": "zKuRo_OwO",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/zKuRo_OwO"
+        },
+        {
+            "gameName": "Cloudbii",
+            "tagLine": "BTOQ",
+            "participantName": "lcloud_darkl",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Exviz",
+            "tagLine": "BOTQ",
+            "participantName": "IExviz",
+            "isStreamer": false,
+            "twitchLink": null
+        },
+        {
+            "gameName": "Va por ti Reich",
+            "tagLine": "BTOQ",
+            "participantName": "Betomin",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/Betomin"
+        },
+        {
+            "gameName": "The beast",
+            "tagLine": "btoq",
+            "participantName": "Veokarmapp",
+            "isStreamer": true,
+            "twitchLink": "https:\/\/www.twitch.tv\/twitch.tv\/veokarmapp"
+        }
     ]);
     
 

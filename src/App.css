@@ -88,7 +88,7 @@ h1, h2{
 }
 
 .navbar ul li a {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   text-decoration: none;
 }
@@ -211,7 +211,7 @@ tr:hover {
 }
 
 a {
-  color: #00aaff; /* Color para enlaces (como el ícono de Twitch) */
+  color: #ffffff; /* Color para enlaces (como el ícono de Twitch) */
   text-decoration: none; /* Sin subrayado */
 }
 
@@ -253,9 +253,13 @@ a {
   width: 100%;
 
 }
+.live-streams h1, p{
+  color:white;
+}
 .live-streams div{
   display: flex;
   align-items: center;
+  width: 80%;
 }
 
 .live-streams a{
@@ -264,11 +268,13 @@ a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: white;
 }
 .live-streams div img{
   width: 25px;
   height: 25px;
 }
+
 
 /* ------------------------------------------------------           Responsive */
 @media (max-width: 768px) {

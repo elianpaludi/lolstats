@@ -481,11 +481,17 @@ function EloStats() {
                             const losses = soloRankedStats?.losses || 0;
                             const winrate = wins + losses > 0 ? ((wins / (wins + losses)) * 100).toFixed(2) : "0.00";
 
+                            const opggUrl = `https://www.op.gg/summoners/las/${encodeURIComponent(user.user.replace("#", "-"))}`;
+
                             return (
                                 <tr key={index} className="table-row">
                                     <td>{index + 1}</td>
                                     <td>{user.participantName}</td>
-                                    <td>{user.user}</td>
+                                    <td>
+                                        <a href={opggUrl} target="_blank" rel="noopener noreferrer">
+                                            {user.user}
+                                        </a>
+                                    </td>
                                     <td>
                                         {user.isStreamer ? (
                                             <a href={user.twitchLink} target="_blank" rel="noopener noreferrer">
