@@ -214,7 +214,7 @@ function EloStats() {
         {
             "gameName": "BTO Hikibi",
             "tagLine": "BTO",
-            "participantName": "HukoPP",
+            "participantName": "DiosHikibi",
             "isStreamer": false,
             "twitchLink": "https:\/\/www.twitch.tv\/daddysmar"
         },
