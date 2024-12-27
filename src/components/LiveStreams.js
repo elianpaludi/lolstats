@@ -268,7 +268,7 @@ function LiveStreams() {
         {
             "gameName": "\u2066BetominSlayer\u2069",
             "tagLine": "\u2066BTOQ\u2069",
-            "participantName": "veohukopp",
+            "participantName": "DiosHikibi",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/BTO_CARPincho"
         },
