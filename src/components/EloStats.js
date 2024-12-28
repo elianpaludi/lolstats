@@ -186,7 +186,7 @@ function EloStats() {
         {
             "gameName": "Cute Destruction",
             "tagLine": "BTOQ",
-            "participantName": "Redsneyer",
+            "participantName": "Bolitadehelado",
             "isStreamer": true,
             "twitchLink": "https:\/\/www.twitch.tv\/bolitadehelado"
         },
@@ -312,9 +312,9 @@ function EloStats() {
         {
             "gameName": "Mean Destruction",
             "tagLine": "BTOQ",
-            "participantName": "Bolitadehelado",
+            "participantName": "Redsneyer",
             "isStreamer": true,
-            "twitchLink": "https:\/\/www.twitch.tv\/Bolitadehelado"
+            "twitchLink": "https://www.twitch.tv/Redsneyer"
         },
         {
             "gameName": "Volg",
